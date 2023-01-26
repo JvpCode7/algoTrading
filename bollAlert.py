@@ -34,7 +34,7 @@ def alertaBoll(B, amplitud, alertaPercentil):
 # %B Bandas de Bollinger
 def bbp(price):
     up, mid, low = BBANDS(price, timeperiod=20, nbdevup=2, nbdevdn=2, matype=0)
-    bbp = (close - low) / (up - low)
+    bbp = (price - low) / (up - low)
     return bbp
 
 # Se calcula el %B
